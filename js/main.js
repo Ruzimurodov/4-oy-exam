@@ -72,6 +72,8 @@ elFirstList.addEventListener("click", evt => {
 
         let userId = evt.target.dataset.userId;
 
+        elCommentList.innerHTML = "";
+
         async function getPost(){
             const res = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
             const data = await res.json()
